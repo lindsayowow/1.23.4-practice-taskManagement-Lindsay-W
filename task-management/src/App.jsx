@@ -11,10 +11,13 @@
 // ● Invalid or missing task IDs are handled gracefully with an error message. 
 
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import TaskList from './components/TaskList';
 import TaskDetail from './components/TaskDetail';
-import Home from './components/Home';
+import './data/taskDataset.json';
+import Home from './Home';
+
+const [selectedTask, setSelectedTask] = useState("");
 
 function App() {
   return (

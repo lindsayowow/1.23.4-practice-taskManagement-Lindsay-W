@@ -5,12 +5,15 @@
 // ● Make sure to create a Link component that navigates to /task/${task.id}. 
 
 import React from 'react';
-import tasks from './data/taskDataset.json';
+import tasks from '../data/taskDataset.json';
+import { Routes, Route, Link } from 'react-router-dom';
 
 export default function TaskList() {
-  return (
-    <div>
-      
-    </div>
-  )
+     
+ return (
+    <ul>
+        {tasks.map(task =>
+        <li><Link to={`/task/${task.id}`}>{task.title}</Link></li>)
+    }</ul>
+);
 }

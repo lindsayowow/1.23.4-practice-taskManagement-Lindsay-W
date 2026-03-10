@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// This activity reinforces the use of React Router's dynamic routes and the useParams 
+// hook. 
+// 1. Displays a list of tasks on the main page. 
+// 2. Allows users to navigate to a specific task's detail page using URL 
+// parameters. 
+// 3. Handles edge cases like invalid or missing task IDs. 
+// Set up the routes to display the task list and task details. 
+// Create a fully functional task viewer where: 
+// ● The task list displays clickable links. 
+// ● Each link navigates to a detail page for the corresponding task. 
+// ● Invalid or missing task IDs are handled gracefully with an error message. 
+
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import TaskList from './components/TaskList';
+import TaskDetail from './components/TaskDetail';
+import Home from './components/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <h1>My Really Cool App</h1>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/component1" element={<TaskList />} />
+        <Route path="/component2" element={<TaskDetail />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,3 +1,56 @@
-To improve user experience, add some basic styling to differentiate the task list and 
+/* To improve user experience, add some basic styling to differentiate the task list and  */
 /* detail pages.  */
 
+.app-container {
+  display: flex;
+  justify-content: center;   
+  margin-top: 40px;  
+  background-color: pink;       
+}
+
+.homepage-container {
+  display: flex;
+  justify-content: center;   
+  margin-top: 40px;         
+}
+
+div.homepage {
+    background-color: aqua;
+    color:blueviolet;
+      padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;          /* keeps it readable */
+  text-align: left;  
+}
+
+.homepage p {
+    text-align:center;
+}
+
+.homepage li {
+    padding: 20px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;   
+  margin-top: 40px;         
+}
+
+div.detail-container {
+    background-color: orange;
+    color:darkgreen;
+      padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;   
+  text-align: left;  
+}
+
+div.error {
+    background-color: red;
+    font-size:20px;
+      padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;   
+  text-align: center;  
+}

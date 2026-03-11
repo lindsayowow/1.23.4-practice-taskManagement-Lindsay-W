@@ -11,14 +11,15 @@ export default function TaskDetail() {
  const task = tasks.find(currentTask => currentTask.id === Number(id));
 
   if (!task) {
-    return <p>Task not found.</p>;
+    return <div className="error"><p>Task not found.</p></div>;
   }
 
  return (
-  <div>
+  <div className="detail-container">
+  <div className="detailpage">
     <p>Task: {task.title}</p>
     <p>Detail: {task.description}</p>
     <Link to={`/`}>Return to Home Page</Link>
-  </div>
+  </div></div>
  );
 }

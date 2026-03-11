@@ -15,18 +15,19 @@ import { Routes, Route, Link } from 'react-router-dom';
 import TaskList from './components/TaskList';
 import TaskDetail from './components/TaskDetail';
 import Home from './Home';
-
+import './App.css';
 
 function App() {
   return (
+    <div className="app-container">
     <div className="App">
-      <h1>My Really Cool App</h1>
+      <h1>Welcome to your task list!</h1>
 
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/task/:id" element={<TaskDetail />} />
       </Routes>
-    </div>
+    </div></div>
   );
 }
 

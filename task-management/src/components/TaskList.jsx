@@ -6,14 +6,16 @@
 
 import React from 'react';
 import tasks from '../data/taskDataset.json';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function TaskList() {
-     
- return (
+  return (
     <ul>
-        {tasks.map(task =>
-        <li><Link to={`/task/${task.id}`}>{task.title}</Link></li>)
-    }</ul>
-);
+      {tasks.map(task => (
+        <li key={task.id}>
+          <Link to={`/task/${task.id}`}>{task.title}</Link>
+        </li>
+      ))}
+    </ul>
+  );
 }

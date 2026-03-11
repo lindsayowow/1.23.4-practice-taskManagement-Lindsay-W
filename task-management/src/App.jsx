@@ -14,20 +14,17 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import TaskList from './components/TaskList';
 import TaskDetail from './components/TaskDetail';
-import './data/taskDataset.json';
 import Home from './Home';
 
-const [selectedTask, setSelectedTask] = useState("");
 
 function App() {
   return (
     <div className="App">
       <h1>My Really Cool App</h1>
 
-      <Routes>
+        <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/component1" element={<TaskList />} />
-        <Route path="/component2" element={<TaskDetail />} />
+        <Route path="/task/:id" element={<TaskDetail />} />
       </Routes>
     </div>
   );
